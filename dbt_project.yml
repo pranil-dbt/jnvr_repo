@@ -33,9 +33,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   +pre-hook:
-    - "alter warehouse transform_wh set warehouse_size=medium" 
+    - "alter warehouse {{ env_var('DBT_WH') }} set warehouse_size=medium" 
   +post-hook:
-    - "alter warehouse transform_wh set warehouse_size=xsmall"     
+    - "alter warehouse {{ env_var('DBT_WH') }} set warehouse_size=xsmall"     
   jnvr_project:
     # Applies to all files under models/example/
     stage:
