@@ -2,7 +2,6 @@
 
 {{
     config(
-      target_database='jnv_analytics',
       target_schema='snapshots',
       unique_key='emp_id',
 
