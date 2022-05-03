@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: src
+    description: raw source data
+    database: sourcedb
+    schema: mk_mall
+    tables:
+      - name: employee
+      - name: emp_snap
